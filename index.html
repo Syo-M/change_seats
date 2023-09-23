@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>席替えアプリケーション</title>
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Chivo+Mono&family=Kosugi+Maru&family=Sono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+    <section id="sec01">
+        <h1>席替えアプリ_ver.2.0</h1>
+
+        <div class="lottery_container">
+            <h2 class="lottery_step01"><span>STEP1</span>：全生徒の人数を入力し、人数確定ボタンを押してください。</h2>
+            <label for="memberCount">生徒数</label>
+            <input type="number" id="memberCount">
+            <button onclick="assignNumbers()">人数確定</button>
+        </div>
+
+        <div class="lottery_container">
+            <h2 class="lottery_step02"><span>STEP2</span>：座席指定が必要な方がいる場合、人数と座席番号を入力。</h2>
+            <p>(※指定生徒数より多くの数の座席番号指定も可能。その場合、選ばれなかった座席は他の生徒に分配されます)</p>
+
+            <div class="lottery_wrap">
+                <div class="lottery_item">
+                    <label for="priorityCount">指定生徒数：</label>
+                    <input type="number" id="priorityCount">
+                </div>
+
+                <div class="lottery_item">
+                    <label for="priorityNumbers">座席番号指定（カンマ区切り）：</label>
+                    <input type="text" id="priorityNumbers">
+                </div>
+
+            </div>
+        </div>
+
+        <h2><span>STEP3</span>：抽選開始ボタンを押すと、抽選結果が表示されます。</h2>
+        <button onclick="drawLottery()">抽選開始！</button>
+
+    </section>
+
+    <section id="sec02">
+        <h2>抽選結果</h2>
+        <ul id="lotteryResult"></ul>
+    </section>
+
+</main>
+
+<footer>
+    <p><small>&copy;2023_syo_m</small></p>
+</footer>
+
+    <script src="js/common.js"></script>
+
+</body>
+</html>

@@ -7,7 +7,7 @@ let nonPriorityWinners = [];
 function assignNumbers() {
     const memberCount = parseInt(document.getElementById("memberCount").value);
     memberNumbers = Array.from({ length: memberCount }, (_, i) => i + 1);
-    alert("メンバーの番号を割り振りました。");
+    alert("生徒人数の登録が完了しました。");
 }
 
 function drawLottery() {
